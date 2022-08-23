@@ -4,4 +4,4 @@
 for num in range(122, 96, -1):
     if (num % 2):
         num = 65 + num - 97
-    print(f"{chr(num)}", end="")
+    print("{}".format(chr(num)), end="")
