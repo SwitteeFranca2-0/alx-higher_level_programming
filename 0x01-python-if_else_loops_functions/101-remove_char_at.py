@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """remove character at indicated location"""
 
+
 def remove_char_at(str, n):
     str1 = ""
     i = 0
