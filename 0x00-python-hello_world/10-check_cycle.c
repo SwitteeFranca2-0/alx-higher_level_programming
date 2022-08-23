@@ -11,9 +11,6 @@ int check_cycle(listint_t *list)
 {
 	listint_t *next;
 	listint_t *new;
-	int *p;
-	int i = 0;
-	int c;
 
 	next = malloc(sizeof(listint_t));
 	new = malloc(sizeof(listint_t));
