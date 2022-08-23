@@ -2,6 +2,11 @@
 #include <stdlib.h>
 #include "lists.h"
 
+/**
+ * check_cycle - check cycle.
+ * @list: list.
+ * Return: int.
+ */
 int check_cycle(listint_t *list)
 {
 	listint_t *next;
@@ -14,11 +19,11 @@ int check_cycle(listint_t *list)
 	new = malloc(sizeof(listint_t));
 	next = list;
 
-	while(list != NULL)
+	while (list != NULL)
 	{
 		new = list;
 		list = list->next;
-		while(new && new != list)
+		while (new && new != list)
 		{
 			new = new->next;
 			if (new == next)
@@ -26,13 +31,11 @@ int check_cycle(listint_t *list)
 				return (1);
 			}
 		}
-		if(list == next)
+		if (list == next)
 		{
 			return (1);
 		}
-		next = list;
-	}
-	
-	return (0);
 
+	}
+	return (0);
 }
