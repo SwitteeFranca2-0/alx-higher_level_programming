@@ -1,12 +1,10 @@
 #!/usr/bin/python3
 
-"""Print name."""
-
 if __name__ == "__main__":
-	import hidden_4
+    """Print name."""
+    import hidden_4
 
-	names = dir(hidden_4)
-	for name in names:
-		if (name[:2] != "__"):
-			print("{}".format(name))
-
+    names = dir(hidden_4)
+    for name in names:
+        if (name[:2] != "__"):
+            print("{}".format(name))

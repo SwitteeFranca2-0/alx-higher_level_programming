@@ -1,12 +1,10 @@
 #!/usr/bin/python3
 
-""" Add values"""
-
 if __name__ == "__main__":
+    """ Add values"""
+    from add_0 import add
 
-	from add_0 import add
+    a = 1
+    b = 2
 
-	a = 1
-	b = 2
-
-	print("{} + {} = {}".format(a, b, add(a, b)))
+    print("{} + {} = {}".format(a, b, add(a, b)))
