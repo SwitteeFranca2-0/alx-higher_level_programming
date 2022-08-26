@@ -5,13 +5,13 @@ if __name__ == "__main__":
     """my calculation"""
 
     from calculator_1 import add, mul, div, sub
-    from sys import argv
+    from sys import argv, exit
 
     if (len(argv) != 4):
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
 
-    a = agrv[1]
+    a = argv[1]
     b = argv[3]
 
     if (argv[2] == '+'):
