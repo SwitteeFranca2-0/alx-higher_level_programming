@@ -14,6 +14,9 @@ int is_palindrome(listint_t **head)
 	int j = 0, i = 0, c;
 	listint_t *temp;
 
+	if (head == NULL)
+		return (1);
+
 	temp = *head;
 	while (temp)
 	{
