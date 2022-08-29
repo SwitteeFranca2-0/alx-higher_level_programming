@@ -16,6 +16,6 @@ void print_python_list_info(PyObject *p)
 
 	for (i = 0, i < len; i++)
 	{
-		printf("Element %li: %s\n", i, (((PyObject *)(p))->ob_type));
+		printf("Element %li: %s\n", i, Py_TYPE((((PyObject *)(p))->ob_item[count])->tp_name);
 	}
 }
