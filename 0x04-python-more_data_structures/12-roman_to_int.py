@@ -6,7 +6,7 @@ def roman_to_int(roman_string):
     num = 0
     r_num = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
 
-    if not roman_string or type(roman_string) != str:
+    if not roman_string or type(roman_string) is not str:
         return 0
     r = roman_string
     while(i < len(r)):
