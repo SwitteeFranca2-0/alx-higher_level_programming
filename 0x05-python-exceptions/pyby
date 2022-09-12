@@ -1,0 +1,54 @@
+  3           0 LOAD_CONST               1 (0)
+              2 STORE_FAST               2 (result)
+
+  4           4 LOAD_GLOBAL              0 (range)
+              6 LOAD_CONST               2 (1)
+              8 LOAD_CONST               3 (3)
+             10 CALL_FUNCTION            2
+             12 GET_ITER
+        >>   14 FOR_ITER                70 (to 86)
+             16 STORE_FAST               3 (i)
+
+  5          18 SETUP_FINALLY           38 (to 58)
+
+  6          20 LOAD_FAST                3 (i)
+             22 LOAD_FAST                0 (a)
+             24 COMPARE_OP               4 (>)
+             26 POP_JUMP_IF_FALSE       38
+
+  7          28 LOAD_GLOBAL              1 (Exception)
+             30 LOAD_CONST               4 ('Too far')
+             32 CALL_FUNCTION            1
+             34 RAISE_VARARGS            1
+             36 JUMP_FORWARD            16 (to 54)
+
+  9     >>   38 LOAD_FAST                2 (result)
+             40 LOAD_FAST                0 (a)
+             42 LOAD_FAST                1 (b)
+             44 BINARY_POWER
+             46 LOAD_FAST                3 (i)
+             48 BINARY_TRUE_DIVIDE
+             50 INPLACE_ADD
+             52 STORE_FAST               2 (result)
+        >>   54 POP_BLOCK
+             56 JUMP_ABSOLUTE           14
+
+ 10     >>   58 POP_TOP
+             60 POP_TOP
+             62 POP_TOP
+
+ 11          64 LOAD_FAST                0 (a)
+             66 LOAD_FAST                1 (b)
+             68 BINARY_ADD
+             70 STORE_FAST               2 (result)
+
+ 12          72 POP_EXCEPT
+             74 POP_TOP
+             76 JUMP_ABSOLUTE           86
+             78 POP_EXCEPT
+             80 JUMP_ABSOLUTE           14
+             82 END_FINALLY
+             84 JUMP_ABSOLUTE           14
+
+ 13     >>   86 LOAD_FAST                2 (result)
+             88 RETURN_VALUE
