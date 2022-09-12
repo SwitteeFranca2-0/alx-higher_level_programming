@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-from msilib.schema import Error
+import sys
 
 
 def magic_calculation(a, b):
@@ -10,7 +10,7 @@ def magic_calculation(a, b):
                 raise Exception('Too far')
             else:
                 result += (a ** b) / i
-        except:
+        except sys.exc_info()[0]:
             result = a + b
             break
     return result
