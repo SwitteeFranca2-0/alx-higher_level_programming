@@ -2,5 +2,4 @@
 
 
 class Square:
-    def Square(self):
         pass
