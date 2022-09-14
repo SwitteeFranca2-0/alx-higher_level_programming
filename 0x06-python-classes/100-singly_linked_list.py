@@ -2,16 +2,24 @@
 
 
 class Node:
+    """Definng a node"""
+
     def __init__(self, data, next_node=None):
+        """intializes a node
+        Args:
+            data(int): type int
+            next_node(node): type node"""
         self.data = data
         self.next_node = next_node
 
     @property
     def data(self):
+        """Returns the data of an object"""
         return self.__data
 
     @property
     def next_node(self):
+        """Returns the next node of the nodes"""
         return self.__next_node
 
     @data.setter
@@ -28,10 +36,14 @@ class Node:
 
 
 class SinglyLinkedList:
+    """Defines a linked list"""
+
     def __init__(self):
+        """Intialzes the linke dlist"""
         self.head = None
 
     def sorted_insert(self, value):
+        """Sorts out the linkd list in ascending order"""
         new_node = Node(value)
         if self.head is None:
             self.head = new_node
@@ -47,6 +59,7 @@ class SinglyLinkedList:
             temp.next_node = new_node
 
     def __str__(self):
+        """Defines the strng attrbutes in the class"""
         val = []
         temp = self.head
         while temp is not None:

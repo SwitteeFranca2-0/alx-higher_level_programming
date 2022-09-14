@@ -7,7 +7,9 @@ class Square:
         """
 
     def __init__(self, size=0):
-        """Initializig the size and including sme conditionals"""
+        """Initializig the size and including sme conditionals
+        Args:
+            size(int): size of the square."""
 
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
