@@ -7,6 +7,7 @@ class Square:
 
     def __init__(self, size=0, position=(0, 0)):
         """Initializes the class square and attribute
+
         Args:
             size(int): size of the square
             position: position cooordinateswhere the square is to be pronted
@@ -26,7 +27,6 @@ class Square:
 
     @size.setter
     def size(self, value):
-        """Sets value of iiattribute size"""
         if type(value) is not int:
             raise TypeError("size must be an integer")
         if value < 0:
@@ -35,9 +35,8 @@ class Square:
 
     @position.setter
     def position(self, value):
-        "Sets value of the attribute, position"
         if (type(value) is not tuple or len(value) != 2 or
-                all(type(num for num in value)) is not int or 
+                not all(isinstance(num, int) for num in value) or
                 not all(num >= 0 for num in value)):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
