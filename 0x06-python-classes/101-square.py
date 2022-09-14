@@ -33,7 +33,7 @@ class Square:
 
     @position.setter
     def position(self, value):
-        if (type(value) is not tuple or 
+        if (type(value) is not tuple or
                 len(value) != 2 or
                 not all(isinstance(num, int) for num in value) or
                 not all(num >= 0 for num in value)):
@@ -46,6 +46,9 @@ class Square:
 
     def my_print(self):
         """Printd the square with spaces an dhash tags"""
+        if self.__size == 0:
+            print("")
+            return
         for i in range(self.__position[1]):
             print("")
         for i in range(self.__size):
@@ -54,12 +57,11 @@ class Square:
             for b in range(self.__size):
                 print("#", end="")
             print("")
-        if self.__size == 0:
-            print("")
-            return
 
     def __str__(self):
         """Defines the string  method of the class"""
+        if self.__size == 0:
+            return ("")
         for i in range(self.__position[1]):
             print("")
         for i in range(self.__size):
@@ -69,6 +71,4 @@ class Square:
                 print("#", end="")
             if i != self.__size - 1:
                 print("")
-        if self.__size == 0:
-            print("")
-        return ("")
+        return("")
