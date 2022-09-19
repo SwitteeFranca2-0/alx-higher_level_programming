@@ -1,0 +1,24 @@
+This test is to test the text indentation file
+
+Let's import the module
+
+>>> lib = __import__("5-text_indentation").text_indentation
+>>> lib("i'll leave this world for as long a s i want to, cuz i'm not a himan")
+i'll leave this world for as long a s i want to, cuz i'm not a himan>>>lib(12334)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+>>>>>> lib([])
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+>>> lib(":::.,")
+:
+
+:
+
+:
+
+.
+
+,>>>

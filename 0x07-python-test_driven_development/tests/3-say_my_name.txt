@@ -1,0 +1,23 @@
+This text is to test the print the name file.
+
+>>> lib = __import__("3-say_my_name").say_my_name
+>>> lib(23)
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+>>> lib(None)
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+>>> lib(None, None)
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string
+>>> lib("")
+My name is  
+>>> lib("Franca")
+My name is Franca 
+>>> lib(None)
+Traceback (most recent call last):
+...
+TypeError: first_name must be a string

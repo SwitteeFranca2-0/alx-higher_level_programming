@@ -1,0 +1,51 @@
+The 0-add_integer.txt file uses doctest module to test the file
+
+Import module
+>>> add_integer = __import__("0-add_integer").add_integer
+
+Normal additions
+
+>>> add_integer(96)
+194
+>>> add_integer(-96)
+2
+
+Let's include two numbers
+
+>>> add_integer(77, 98)
+175
+>>> add_integer(99.5, 88.9)
+187
+>>> add_integer(-0.0, -1)
+-1
+
+Let's spice it up a litle
+
+>>> add_integer(None, 97)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+>>> add_integer(97, None)
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+>>> add_integer("Miss", 97)
+Traceback (most recent call last):                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+...
+TypeError: a must be an integer
+>>> add_integer("", [])
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+>>> add_integer(98, 10j)
+Traceback (most recent call last):
+...
+TypeError: b must be an integer                                                                                                                                                                                                                                                                                                                                     
+>>> add_integer(set())
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+>>> add_integer(())
+Traceback (most recent call last):
+...
+TypeError: a must be an integer

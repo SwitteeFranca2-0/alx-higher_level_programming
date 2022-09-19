@@ -1,0 +1,50 @@
+This text file tests the coode "2-matrix_divided.py" 
+
+Let's put import the module
+
+>>> lib = __import__("2-matrix_divided").matrix_divided
+>>> matrix = [[0.0, 5.0, 6.9], [9, 100, 33], [546, 789, 0], [8.9, 33, 79]]
+>>> print(lib(matrix, 3))
+[[0.0, 1.67, 2.3], [3.0, 33.33, 11.0], [182.0, 263.0, 0.0], [2.97, 11.0, 26.33]]
+>>> print(lib(matrix, -1.565))
+[[-0.0, -3.19, -4.41], [-5.75, -63.9, -21.09], [-348.88, -504.15, -0.0], [-5.69, -21.09, -50.48]]
+>>> print(lib(matrix, 0.0))
+Traceback (most recent call last):
+...
+ZeroDivisionError: division by zero
+>>> matrix = [[0.0, "Frnaca", 6.9], [9, (33, 88, 66), 33], [546, ("string", 789), 0], [8.9, 33, 79]]
+>>> print(lib(matrix, 3))
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+>>> print(lib(matrix, 0.0))
+Traceback (most recent call last):
+...
+ZeroDivisionError: division by zero
+>>> matrix = [[0.0, 5.0, 5, 6.9], [9, 100, 4, 33], [546, 789, 55, 0], [8.9, 10j, 33, 79]]
+>>> print(lib(matrix, 3))
+Traceback (most recent call last):
+...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+>>> matrix = [[0.0, 5.0, 6.9], [9, 100, 33], [546, 789, 0], [8.9, 33, 79]]
+>>> print(lib(matrix, "my name"))
+Traceback (most recent call last):
+...
+TypeError: div must be a number
+>>> print(lib(matrix, 10j))
+Traceback (most recent call last):
+...
+TypeError: div must be a number
+>>> print(lib(matrix, set()))
+Traceback (most recent call last):
+...
+TypeError: div must be a number
+>>> print(lib(matrix, []))
+Traceback (most recent call last):
+...
+TypeError: div must be a number
+>>> matrix = [[0.0, 5.0, 6.9], [9, 100, 33], [546, 789, 0], [8.9, 33, 99, 79]]
+>>> print(lib(matrix, 3))
+Traceback (most recent call last):
+...
+TypeError: Each row of the matrix must have the same size

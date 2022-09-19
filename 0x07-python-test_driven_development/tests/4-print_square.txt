@@ -1,0 +1,70 @@
+This module is to print squares 
+
+Let's import the module
+>>> lib = __import__("4-print_square").print_square
+>>> lib(4)
+####
+####
+####
+####
+>>> lib(-1)
+Traceback (most recent call last):
+...
+ValueError: size must be >= 0
+>>> lib(11)
+###########
+###########
+###########
+###########
+###########
+###########
+###########
+###########
+###########
+###########
+###########
+>>> lib("pearson")
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+>>> lib(10j)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+>>> tim = [2, 3, 4, 6]
+>>> for m in tim:
+...     lib(m)
+...
+##
+##
+###
+###
+###
+####
+####
+####
+####
+######
+######
+######
+######
+######
+######
+>>> tim = [9, "Franca", 7, 6]
+>>> for m in tim:
+...     lib(m)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+>>> tim = [None]
+>>> [lib(m) for m in tim]
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+>>> lib(1.3)
+...
+TypeError: size must be an integer
+>>> lib([])
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
