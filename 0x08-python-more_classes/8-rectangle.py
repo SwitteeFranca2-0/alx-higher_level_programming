@@ -5,6 +5,9 @@
 class Rectangle:
     """This class defines a rectangle"""
 
+    number_of_instances = 0
+    print_symbol = "#"
+
     def __init__(self, width=0, height=0):
         """This class initializes a clas
         Args:
@@ -14,6 +17,7 @@ class Rectangle:
 
         self.height = height
         self.width = width
+        type(self).number_of_instances += 1
 
     @property
     def width(self):
@@ -57,7 +61,7 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return ("")
         for i in range(self.__height):
-            [rec.append("#") for j in range(self.__width)]
+            [rec.append(str(self.print_symbol)) for j in range(self.__width)]
             if i != self.__height - 1:
                 rec.append("\n")
         return ("").join(rec)
@@ -67,3 +71,17 @@ class Rectangle:
         rec = "Rectangle(" + str(self.__width) + ","
         rec += str(self.__height) + ")"
         return rec
+
+    def __del__(self):
+        """Deletes a instnace class"""
+        print("Bye rectangle...")
+        type(self).number_of_instances -= 1
+
+    def bigger_or_equal(rect_1, rect_2):
+        """his function identifies whether or not bith triangles are equal"""
+        if type(rect_1) is not Rectangle:
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if type(rect_2) is not Rectangle:
+            raise TypeError("rect_2 must be an instance of Rectangle")
+        if rect_1.area() >= rect_2.area():
+            return rect_1

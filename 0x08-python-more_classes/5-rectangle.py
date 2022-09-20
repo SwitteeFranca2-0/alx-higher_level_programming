@@ -62,8 +62,12 @@ class Rectangle:
                 rec.append("\n")
         return ("").join(rec)
 
-    def __repr__(self):
+    d def __repr__(self):
         """This is to represent a rectangle"""
         rec = "Rectangle(" + str(self.__width) + ","
         rec += str(self.__height) + ")"
         return rec
+
+    def __del__(self):
+        """Deletes a instnace class"""
+        print("Bye rectangle...")
