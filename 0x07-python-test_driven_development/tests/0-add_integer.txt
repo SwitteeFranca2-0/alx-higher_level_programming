@@ -40,7 +40,7 @@ TypeError: a must be an integer
 >>> add_integer(98, 10j)
 Traceback (most recent call last):
 ...
-TypeError: b must be an integer                                                                                                                                                                                                                                                                                                                                     
+TypeError: b must be an integer
 >>> add_integer(set())
 Traceback (most recent call last):
 ...
