@@ -41,7 +41,7 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_empty_list(self):
         """This function fiinds the maximum of a group of numbers"""
-        self..assertEqual(max(), None)
+        self.assertEqual(max(), None)
 
 
 if __name__ == '__main__':

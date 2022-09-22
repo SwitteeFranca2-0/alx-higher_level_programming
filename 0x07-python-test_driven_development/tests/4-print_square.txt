@@ -70,7 +70,6 @@ Traceback (most recent call last):
 ...
 TypeError: size must be an integer
 >>> lib(0)
-<BLANKLINE>
 >>> lib()
 Traceback (most recent call last):
 ...
