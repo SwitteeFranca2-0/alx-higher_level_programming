@@ -29,7 +29,7 @@ def matrix_mul(m_a, m_b):
         if len(r) != max:
             raise TypeError("each row of m_a must be of the same size")
 
-    for r in m_b:        
+    for r in m_b:
         if any(type(n) not in [int, float] for n in r):
             raise TypeError("m_b should contain only integers or floats")
         if len(r) != max_2:

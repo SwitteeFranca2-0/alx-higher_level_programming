@@ -1,0 +1,10 @@
+This module is testing the python script of this file
+
+>>> lib = __import__('101-lazy_matrix_mul').lazy_matrix_mul
+>>> m_a = [[1, 2, 5], [1, 3, 4]]
+>>> m_b = [[1, 2], [3, 4], [9, 5]]
+>>> print(lib(m_a, m_b))
+[[52, 35], [46, 34]]
+>>> m_a = []
+>>> m_b = []
+>>> print(lib(m_a, m_b))
