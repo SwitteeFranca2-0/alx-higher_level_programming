@@ -5,6 +5,7 @@ import unittest
 
 max = __import__('6-max_integer').max_integer
 
+
 class TestMaxInteger(unittest.TestCase):
     """This class tests the imported function"""
 
@@ -12,7 +13,6 @@ class TestMaxInteger(unittest.TestCase):
         """This function fiinds the maximum of a group of numbers"""
         no_list = [1, 2, 3, 4, 5]
         self.assertEqual(max(no_list), 5)
-
 
     def test_max_beginning_no_list(self):
         """This function fiinds the maximum of a group of numbers"""
@@ -38,10 +38,11 @@ class TestMaxInteger(unittest.TestCase):
         """This function fiinds the maximum of a group of numbers"""
         no_list = [1]
         self.assertEqual(max(no_list), 1)
-    
+
     def test_empty_list(self):
         """This function fiinds the maximum of a group of numbers"""
         self..assertEqual(max(), None)
+
 
 if __name__ == '__main__':
     unittest.main()
