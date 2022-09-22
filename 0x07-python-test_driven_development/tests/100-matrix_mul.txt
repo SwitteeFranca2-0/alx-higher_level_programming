@@ -68,3 +68,14 @@ ValueError: m_a and m_b can't be multiplied
 >>> m_b = [[1, 2], [3, 4], [9, 5]]
 >>> print(lib(m_a, m_b))
 [[52, 35], [46, 34]]
+>>> m_a = []
+>>> print(lib(m_a, m_b))
+Traceback (most recent call last):
+...
+ValueError: m_a can't be empty
+>>> m_a = m_b[:]
+>>> m_b = []
+>>> print(lib(m_a, m_b))
+Traceback (most recent call last):
+...
+ValueError: m_b can't be empty
