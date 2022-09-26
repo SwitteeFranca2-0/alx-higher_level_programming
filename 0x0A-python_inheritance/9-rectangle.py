@@ -26,3 +26,12 @@ class Rectangle(BaseGeometry):
         self.__width = width
         self.integer_validator("height", height)
         self.__height = height
+
+    def area(self):
+        """Defining the area of the class"""
+        return self.__height * self.__width
+
+    def __str__(self):
+        """This function validates ntegers"""
+        rec = "[Rectangle] " + str(self.__width) + "/" + str(self.__height)
+        return rec

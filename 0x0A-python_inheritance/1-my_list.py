@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """This module decalres a class"""
 
+
 class MyList(list):
     """This class inherits from a class list."""
 
