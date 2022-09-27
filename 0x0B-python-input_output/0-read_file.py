@@ -5,5 +5,4 @@
 def read_file(filename=""):
     """This implements the read line"""
     with open(filename) as f:
-        [print(line, end="") for line in f]
-    print("")
+        print(f.read(), end="")

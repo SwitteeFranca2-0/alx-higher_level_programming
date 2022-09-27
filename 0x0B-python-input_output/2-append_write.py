@@ -5,5 +5,4 @@
 def append_write(filename="", text=""):
     """Thiis function is an append function"""
     with open(filename, 'a', encoding="utf-8") as f:
-        nb = f.write(text)
-    return nb
+        return f.write(text)
