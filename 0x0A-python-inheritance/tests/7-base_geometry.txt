@@ -1,0 +1,41 @@
+this module tests the module "7-base_geometry.py"
+
+>>> Bg = __import__('7-base_geometry').BaseGeometry
+>>> Bg.area()
+Traceback (most recent call last):
+...
+TypeError: area() missing 1 required positional argument: 'self'
+>>> tin = Bg()
+>>> tin.integer_validator("my_int", 9)
+>>> tin.integer_validator("my_int", -9)
+Traceback (most recent call last):
+...
+ValueError: my_int must be greater than 0
+>>> tin.integer_validator("my_int", "touh")
+Traceback (most recent call last):
+...
+TypeError: my_int must be an integer
+>>> tin.integer_validator(5, 10j)
+Traceback (most recent call last):
+...
+TypeError: 5 must be an integer
+>>> tin.integer_validator()
+Traceback (most recent call last):
+...
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+>>> tin.area(1)
+Traceback (most recent call last):
+...
+TypeError: area() takes 1 positional argument but 2 were given
+>>> tin.integer_validator(-10)
+Traceback (most recent call last):
+...
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+>>> tin.integer_validator(-10, [9, 19, 0])
+Traceback (most recent call last):
+...
+TypeError: -10 must be an integer
+>>> tin.integer_validator(-10, set())
+Traceback (most recent call last):
+...
+TypeError: -10 must be an integer
