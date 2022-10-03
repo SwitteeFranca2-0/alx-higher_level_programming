@@ -20,14 +20,14 @@ class Base:
     def to_json_string(list_dictionaries):
         """This function returns the json string of the argument"""
         if list_dictionaries is None:
-            return("[]")
+            return []
         return json.dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
         """This is a class mtehod that saves a json string to a file"""
         if list_objs is None:
-            return ("[]")
+            return []
         f = cls.__name__ + ".json"
         with open(f, 'w', encoding="utf-8") as f:
             if list_objs is None:
@@ -40,7 +40,7 @@ class Base:
     def from_json_string(json_string):
         """This function converts json strings to dictionaries"""
         if json_string is None:
-            return ("[]")
+            return []
         return json.loads(json_string)
 
     @classmethod
