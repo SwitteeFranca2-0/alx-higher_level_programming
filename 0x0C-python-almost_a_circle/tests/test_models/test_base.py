@@ -54,8 +54,8 @@ class TestTheBaseClass(unittest.TestCase):
 
     def test_to_json_stringInteger(self):
         """est the to json string class method"""
-        list_dic = 12
-        self.assertEqual(Base.to_json_string(list_dic), '12')
+        list_dic = "12"
+        self.assertEqual(Base.to_json_string(list_dic), '"12"')
 
     def test_to_json_stringTuple(self):
         """est the to json string class method"""
@@ -93,7 +93,3 @@ class TestTheBaseClass(unittest.TestCase):
         string = '[{"id"}, {"id"}]'
         self.assertRaises(json.decoder.JSONDecodeError,
                           Base.from_json_string, string)
-
-
-if __name__ == '__main__':
-    unittest.main()
