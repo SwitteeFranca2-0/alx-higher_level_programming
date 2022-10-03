@@ -1,4 +1,4 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 """This module contains a base class for all future classes in this project"""
 import json
 import csv

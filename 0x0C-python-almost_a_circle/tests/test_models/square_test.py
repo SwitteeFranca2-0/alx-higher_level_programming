@@ -3,7 +3,6 @@
 
 import json
 import unittest
-import sys
 from models.rectangle import Rectangle as Rec
 from models.base import Base
 from models.square import Square as Sq

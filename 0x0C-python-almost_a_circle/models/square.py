@@ -4,6 +4,8 @@ from .rectangle import Rectangle
 
 
 class Square(Rectangle):
+    """This class is the class square"""
+
     def __init__(self, size, x=0, y=0, id=None):
         """This function inherits values from the super classes"""
         super().__init__(size, size, x, y, id)
@@ -53,4 +55,3 @@ class Square(Rectangle):
             'id': self.id, 'x': self.x,
             'size': self.size, 'y': self.y
         }
-
