@@ -3,6 +3,7 @@
 import json
 import csv
 
+
 class Base:
     """This class declares a base"""
     ___nb_objects = 0
@@ -34,14 +35,14 @@ class Base:
             else:
                 list_o = [o.to_dictionary() for o in list_objs]
                 f.write(Base.to_json_string(list_o))
-    
+
     @staticmethod
     def from_json_string(json_string):
         """This function converts json strings to dictionaries"""
         if json_string is None:
             return ("[]")
         return json.loads(json_string)
-    
+
     @classmethod
     def create(cls, **dictionary):
         """This module returns an instance wiith all attr. already set"""
@@ -51,17 +52,18 @@ class Base:
             new_o = cls(1)
         new_o.update(**dictionary)
         return new_o
-    
+
     @classmethod
     def load_from_file(cls):
         """loads sbclasss from file"""
         filename = cls.__name__ + ".json"
         try:
             with open(filename, 'r') as f:
-                return [cls.create(**dic) for dic in Base.from_json_string(f.read())]
+                return [cls.create(**dic) for dic in
+                        Base.from_json_string(f.read())]
         except IOError:
             return []
-    
+
     @classmethod
     def save_to_file_csv(cls, list_objs):
         """This saves the arg to a csv file"""
@@ -71,15 +73,16 @@ class Base:
             c = csv.writer(f)
             if cls.__name__ == 'Rectangle':
                 for o in list_o:
-                    c.writerow([o['id'], o['width'], o['height'], o['x'], o['y']])
+                    c.writerow([o['id'], o['width'],
+                                o['height'], o['x'], o['y']])
             if cls.__name__ == 'Square':
                 for o in list_o:
                     c.writerow([o['id'], o['size'], o['x'], o['y']])
-    
+
     @classmethod
     def load_from_file_csv(cls):
         """This function loads from a csv file"""
-        filename = cls.__name__ + ".csv" 
+        filename = cls.__name__ + ".csv"
         try:
             with open(filename, 'r') as f:
                 rec = []
@@ -104,14 +107,3 @@ class Base:
                 return [cls.create(**dic) for dic in rec]
         except IOError:
             return []
-
-                        
-
-
-
-
-
-
-
-
-
