@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """This module contain sthe class square."""
-from rectangle import Rectangle
+from .rectangle import Rectangle
 
 
 class Square(Rectangle):
