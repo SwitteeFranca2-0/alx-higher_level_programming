@@ -97,13 +97,13 @@ class Rectangle(Base):
                     if no_args == 0:
                         self.id = arg
                     elif no_args == 1:
-                        self.__width = arg
+                        self.width = arg
                     elif no_args == 2:
-                        self.__height = arg
+                        self.height = arg
                     elif no_args == 3:
-                        self.__x = arg
+                        self.x = arg
                     elif no_args == 4:
-                        self.__y = arg
+                        self.y = arg
                 no_args += 1
         else:
             [setattr(self, k, v) for k, v in

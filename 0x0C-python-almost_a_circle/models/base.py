@@ -29,7 +29,7 @@ class Base:
         filename = cls.__name__ + ".json"
         with open(filename, 'w', encoding="utf-8") as f:
             if list_objs is None:
-                f.write([])
+                f.write("[]")
             else:
                 list_o = [o.to_dictionary() for o in list_objs]
                 f.write(Base.to_json_string(list_o))
@@ -66,9 +66,13 @@ class Base:
     def save_to_file_csv(cls, list_objs):
         """This saves the arg to a csv file"""
         filename = cls.__name__ + ".csv"
-        list_o = [o.to_dictionary() for o in list_objs]
+        if list_objs is not None:
+            list_o = [o.to_dictionary() for o in list_objs]
         with open(filename, 'w', encoding="utf-8") as f:
             c = csv.writer(f)
+            if list_objs is None or len(list_objs) == 0:
+                f.write('[]')
+                return
             if cls.__name__ == 'Rectangle':
                 for o in list_o:
                     c.writerow([o['id'], o['width'],
