@@ -1,4 +1,3 @@
--- more tables and databases
-
-INSERT INTO states (name, id) VALUES('California', 08);
-SELECT id, name FROM cities WHERE cities.state_id  = (SELECT id FROM states WHERE name = 'California') ORDER BY cities.id ASC;
+-- lists all the cities of California that can be found in the database hbtn_0d_usa
+-- lists all rows of a column in a database
+SELECT id, name FROM cities WHERE state_id = (SELECT id FROM states WHERE name = 'California') ORDER BY id ASC;
