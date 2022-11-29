@@ -7,11 +7,6 @@ if (process.argv.length <= 3) {
   for (let i = 2; i < process.argv.length; i++) {
     arr.push(Number(process.argv[i]));
   }
-  let max = 0;
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] > max) {
-      max = arr[i];
-    }
-  }
-  console.log(max);
+  arr.sort();
+  console.log(arr[arr.length - 2]);
 }
