@@ -1,23 +1,17 @@
 #!/usr/bin/node
+const SquareP = require('./5-square');
 
-const Squ = require('./5-Square');
-
-class Square extends Squ {
+class Square extends SquareP {
   charPrint (c) {
     if (c === undefined) {
-      super.print();
-    } else {
-      let string = '';
-      for (let w = 0; w < this.height; w++) {
-        for (let h = 0; h < this.width; h++) {
-          string += c;
-        }
-        if (w !== this.height - 1) {
-          string += '\n';
-        }
+      c = 'X';
+    }
+    for (let i = 0; i < this.height; i++) {
+      let s = '';
+      for (let j = 0; j < this.width; j++) {
+        s += c;
       }
-
-      console.log(string);
+      console.log(s);
     }
   }
 }
