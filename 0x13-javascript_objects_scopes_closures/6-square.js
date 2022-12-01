@@ -1,8 +1,8 @@
 #!/usr/bin/node
 
-const Rect = require('./4-rectangle');
+const Squ = require('./5-Square');
 
-class Square extends Rect {
+class Square extends Squ {
   charPrint (c) {
     if (c === undefined) {
       super.print();
