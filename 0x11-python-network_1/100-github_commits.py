@@ -15,4 +15,4 @@ if __name__ == "__main__":
             author = r[i].get('commit').get('author').get('name')
             print('{}: {}'.format(sha, author))
     except IndexError:
-            pass
+        pass
