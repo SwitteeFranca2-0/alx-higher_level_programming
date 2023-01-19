@@ -1,2 +1,3 @@
-#!/usr/bin/bash
+#!/bin/bash
+#sending a curl request to a link
 curl -L $1
