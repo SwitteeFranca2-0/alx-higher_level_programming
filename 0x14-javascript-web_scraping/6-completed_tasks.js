@@ -11,7 +11,8 @@ request.get(process.argv[2], function (error, response, body) {
     for (let b = 0; b < data.length; b++) {
       if (data[b].userId === i && data[b].completed === true) { sum += 1; }
     }
-    dataDic[i] = sum;
+    if (sum > 0)
+      dataDic[i] = sum;
   }
   console.log(dataDic);
 });
