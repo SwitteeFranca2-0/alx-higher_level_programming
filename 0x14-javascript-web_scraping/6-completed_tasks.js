@@ -3,7 +3,7 @@
 const request = require('request');
 
 const dataDic = {};
-request.get('https://jsonplaceholder.typicode.com/todos', function (error, response, body) {
+request.get(process.argv[2], function (error, response, body) {
   if (error) throw error;
   const data = JSON.parse(body);
   for (let i = 1; i < 11; i++) {
